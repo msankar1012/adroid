@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/adroid/static/css/main.eb29a970.css",
+    "main.js": "/adroid/static/js/main.bb5429eb.js",
+    "static/js/787.2408d684.chunk.js": "/adroid/static/js/787.2408d684.chunk.js",
+    "static/media/hero-video-home.mp4": "/adroid/static/media/hero-video-home.ee34354a3e62fcdfeb9b.mp4",
+    "static/media/why-adroid.svg": "/adroid/static/media/why-adroid.576eaa48d4b390a204ad65cd233349f6.svg",
+    "static/media/img-who-we-are.svg": "/adroid/static/media/img-who-we-are.547000474023261cd5594667358dfbdf.svg",
+    "static/media/img-news.svg": "/adroid/static/media/img-news.56ea084f5031ac34f41af8cf05edd600.svg",
+    "static/media/img-our-solutions.svg": "/adroid/static/media/img-our-solutions.26894b453e43706b4301451f941abc55.svg",
+    "static/media/img-robotics-type.svg": "/adroid/static/media/img-robotics-type.7cf15d8112f192d9ae22e4b9df20ed21.svg",
+    "static/media/logo.svg": "/adroid/static/media/logo.92725df17375f8ceb1f65e110da4d127.svg",
+    "static/media/img-partner-universal-robots.svg": "/adroid/static/media/img-partner-universal-robots.6658908a7049260d7f87a228304cd280.svg",
+    "static/media/logo-partner-abb.svg": "/adroid/static/media/logo-partner-abb.285fdfde90cac68b47882491c3a2097a.svg",
+    "static/media/img-partner-kuka.svg": "/adroid/static/media/img-partner-kuka.172a639e135715b24886c3124ddeecb0.svg",
+    "static/media/img-logo-fanuc.svg": "/adroid/static/media/img-logo-fanuc.1cd3417937eb69723314344117219a3b.svg",
+    "index.html": "/adroid/index.html",
+    "main.eb29a970.css.map": "/adroid/static/css/main.eb29a970.css.map",
+    "main.bb5429eb.js.map": "/adroid/static/js/main.bb5429eb.js.map",
+    "787.2408d684.chunk.js.map": "/adroid/static/js/787.2408d684.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eb29a970.css",
+    "static/js/main.bb5429eb.js"
+  ]
+}
