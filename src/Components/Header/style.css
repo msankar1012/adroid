@@ -1,0 +1,394 @@
+.ad-header {
+    width: 100%;
+    display: inline-block;
+    padding: 25px 0;
+    transition: padding-top .3s linear, padding-bottom .3s linear;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1010
+}
+
+.ad-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.ad-header .logo img {
+    max-height: 38px;
+}
+
+.ad-header .logo svg {
+    width: 148px;
+    height: 38px;
+    fill: rgba(var(--text-color), 1) !important;
+    display: none;
+    transition: 0.5s ease-in;
+}
+
+.ad-header nav {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.ad-header nav ul>li {
+    float: left;
+    margin-right: 25px;
+    position: relative;
+    list-style: none;
+}
+
+.ad-header nav ul>li:last-child {
+    margin-right: 0
+}
+
+.ad-header nav ul>li>a {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    padding: 5px 0;
+    cursor: pointer;
+    color: rgba(var(--white), 1);
+    font-weight: 400;
+}
+
+.ad-header nav ul li a:hover {
+    color: #8005D8;
+    text-decoration: none
+}
+
+.ad-header nav ul li.current-menu-item>a,
+.ad-header nav ul li.active>a {
+    color: #8005D8;
+    font-weight: 700
+}
+
+.ad-header .btns-right {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.ad-header .btn-outline-primary {
+    margin-right: 10px
+}
+
+.menu-toggle {
+    width: 55px;
+    height: 55px;
+    position: relative;
+    z-index: 99;
+    overflow: hidden;
+    cursor: pointer;
+    margin: -3px -12px 0 0
+}
+
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    position: relative;
+    left: 0
+}
+
+.open-offcanvas .hamRotate {
+    transform: rotate(45deg)
+}
+
+.line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 4;
+    stroke-linecap: round
+}
+
+.ham .top {
+    stroke-dasharray: 40 160
+}
+
+.ham .middle {
+    stroke-dasharray: 40 142;
+    transform-origin: 50%;
+    transition: transform 400ms
+}
+
+.ham .bottom {
+    stroke-dasharray: 40 85;
+    transform-origin: 50%;
+    transition: transform 400ms, stroke-dashoffset 400ms
+}
+
+.open-offcanvas .ham .top {
+    stroke-dashoffset: -64px
+}
+
+.open-offcanvas .ham .middle {
+    transform: rotate(90deg)
+}
+
+.open-offcanvas .ham .bottom {
+    stroke-dashoffset: -64px
+}
+
+.ad-header.is-sticky {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
+    -ms-filter-backdrop-filter: blur(10px);
+    -o-filter-backdrop-filter: blur(10px);
+    padding: 16px 0;
+    box-shadow: rgba(0, 0, 0, 0.05) 1px 0 5px;
+}
+
+.ad-header.is-sticky .logo svg {
+    display: block;
+}
+
+.ad-header.is-sticky .logo img {
+    display: none;
+}
+
+.ad-header.is-sticky nav ul>li>a {
+    color: rgba(var(--text-color), 1);
+}
+
+@media (min-width: 992px) {
+    .ad-header nav ul li.menu-item-has-children {
+        overflow: hidden
+    }
+
+    .ad-header nav ul li.menu-item-has-children>a {
+        padding-right: 15px
+    }
+
+    .ad-header nav ul li.menu-item-has-children>a:after {
+        content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3Cpath d='M192 384c-8.188 0-16.38-3.125-22.62-9.375l-160-160c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L192 306.8l137.4-137.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-160 160C208.4 380.9 200.2 384 192 384z'/%3E%3C/svg%3E");
+        transition: transform .2s ease;
+        position: absolute;
+        right: 0;
+        width: 8px;
+        top: 6px
+    }
+
+    .ad-header nav ul li.menu-item-has-children:hover>a:after {
+        transform: rotateZ(180deg)
+    }
+
+    .ad-header nav ul li ul {
+        position: absolute;
+        top: 100%;
+        margin-top: 15px;
+        opacity: 0;
+        left: 35px;
+        -webkit-transform: rotate(0);
+        -webkit-transition: all .4s linear;
+        -moz-transform: rotate(0);
+        -moz-transition: all .4s linear;
+        -o-transform: rotate(0);
+        -o-transition: all .4s linear;
+        padding-top: 20px;
+        transform: translateX(-50%)
+    }
+
+    .ad-header nav ul li ul:before {
+        content: '';
+        height: calc(100% - 2px);
+        width: 100%;
+        background: #ffffff;
+        position: absolute;
+        left: 0;
+        top: 7px;
+        z-index: -1;
+        border: 2px solid #f5f5f5;
+        border-radius: 0 10px 10px 10px
+    }
+
+    .ad-header nav ul li ul:after {
+        content: '';
+        border-color: #F4F0EB transparent;
+        border-style: solid;
+        border-width: 0 10px 10px;
+        height: 0;
+        width: 0;
+        position: absolute;
+        left: 50%;
+        top: -2px;
+        margin-left: -10px
+    }
+
+    .ad-header nav ul li ul li {
+        width: 100%;
+        float: left;
+        height: auto;
+        font-size: 15px;
+        padding: 8px 0;
+        white-space: nowrap;
+        font-family: 'Red Hat Display', sans-serif;
+        letter-spacing: .02em
+    }
+
+    .ad-header nav ul li ul li.menu_with_icon a {
+        position: relative;
+        padding-left: 53px !important
+    }
+
+    .ad-header nav ul li ul li.menu_with_icon {
+        position: relative
+    }
+
+    .ad-header nav ul li ul li.menu_with_icon i {
+        position: absolute;
+        left: 13px;
+        top: 50%;
+        font-size: 23px;
+        color: #8005D8;
+        transform: translateY(-50%)
+    }
+
+    .ad-header nav ul li:first-child ul {
+        width: 250px
+    }
+
+    .ad-header nav ul li:first-child ul li {
+        white-space: normal
+    }
+
+    .ad-header nav ul li:first-child ul li:last-child {
+        border-top: 1px solid #F4F0EB;
+        padding: 7px 0 8px !important;
+        margin-top: 10px
+    }
+
+    .ad-header nav ul li:nth-child(4) ul li:last-child {
+        border-top: 1px solid #F4F0EB;
+        padding: 11px 0 8px !important;
+        margin-top: 10px
+    }
+
+    .ad-header nav ul li:nth-child(4) ul li:last-child a svg {
+        margin-left: 5px
+    }
+
+    .ad-header nav ul li ul li a {
+        width: 100%;
+        float: left;
+        height: auto;
+        text-decoration: none !important;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 2px 18px !important;
+        line-height: 1.2em
+    }
+
+    .ad-header nav ul li ul li a span {
+        width: 100%;
+        display: inline-block;
+        font-size: 13px;
+        color: #999999;
+        font-weight: 400
+    }
+
+    .ad-header nav ul li ul li:last-child {
+        padding-bottom: 15px
+    }
+
+    .ad-header nav ul li:hover {
+        overflow: visible
+    }
+
+    .ad-header nav ul li:hover ul {
+        margin-top: 0;
+        opacity: 1;
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -o-transform: rotate(0);
+        -o-transition: all .4s linear;
+        transform: translateX(-50%)
+    }
+
+    .ad-header .menu-toggle {
+        display: none
+    }
+}
+
+@media (min-width: 1200px) {
+    .ad-header nav ul>li {
+        margin-right: 32px
+    }
+
+    .ad-header nav ul>li>a {
+        font-size: 17px
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .ad-header .logo {
+        margin-top: 6px
+    }
+
+    .ad-header .logo img {
+        max-height: 30px
+    }
+
+    .ad-header nav ul>li {
+        font-size: 14px;
+        margin-right: 25px
+    }
+
+    .ad-header .btn {
+        font-size: 12.5px;
+        padding: 10px 17px 8px
+    }
+
+    .ad-header .btn-outline-primary {
+        padding: 8px 17px 6px;
+        margin-left: 5px
+    }
+}
+
+@media (max-width: 991px) {
+    .wrapper_main {
+        padding-top: 58px
+    }
+
+    .ad-header {
+        padding: 5px 0 !important
+    }
+
+    .ad-header .container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+    }
+
+    .ad-header .logo {
+        margin-top: 2px
+    }
+
+    .ad-header .logo img {
+        max-height: 25px
+    }
+
+    .ad-header nav,
+    .ad-header .btns-right,
+    .ad-header .nav-bar {
+        display: none
+    }
+
+    .ad-header.menu-shrink {
+        padding: 5px 0 !important
+    }
+}
+
+@media (max-width: 679px) {
+    .ad-header .logo img {
+        max-height: 30px
+    }
+}

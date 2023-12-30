@@ -1,0 +1,44 @@
+.ad-hero-home {
+    position: relative;
+    display: flex;
+}
+
+.ad-hero-home video {
+    width: 100%;
+    height: 80vh;
+    object-fit: cover;
+    margin: 0;
+}
+
+.ad-hero-home:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: rgba(var(--black), 0.6);
+    z-index: 35;
+}
+
+.ad-hero-text {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 45;
+    text-align: center;
+}
+
+.text-count {
+    font-size: 50px;
+    line-height: 1.2em;
+}
+
+.ad-fun-facts img {
+    max-height: 50px;
+}
